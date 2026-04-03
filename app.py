@@ -262,8 +262,6 @@ st.markdown(
     """
     <div style='text-align: center; color: grey;'>
     UAC Care System Analytics | 
-    U.S Department of Health and Human Services | 
-    Unified Mentor Internship Project
     </div>
     """,
     unsafe_allow_html=True
