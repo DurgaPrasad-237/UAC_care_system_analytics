@@ -166,7 +166,6 @@ streamlit
 pandas
 matplotlib
 seaborn
-scikit-learn
 numpy
 ```
 
