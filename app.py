@@ -95,7 +95,7 @@ col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.metric(
-        label='Total Children Under Care',
+        label='Average Daily Children Under Care',
         value=f"{df_filtered['Total System Load'].mean():.0f}"
     )
 
