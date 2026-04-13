@@ -196,14 +196,7 @@ pip install -r requirements.txt
 
 **Analysis Period:** January 2023 — December 2025
 
-**Report Date:** March 2026
+**Report Date:** April 2026
 
 ---
 
-## 📜 References
-
-- U.S. Department of Health and Human Services — UAC Program Data
-- Homeland Security Act of 2002, Pub. L. 107-296
-- Trafficking Victims Protection Reauthorization Act of 2008
-- pandas Documentation — https://pandas.pydata.org
-- Streamlit Documentation — https://streamlit.io
