@@ -21,6 +21,12 @@ st.set_page_config(
 def load_data():
     df = pd.read_csv('uac_cleaned.csv')
     df['Date'] = pd.to_datetime(df['Date'])
+    
+    # Fix boolean columns
+    df['Anomaly Flag'] = df['Anomaly Flag'].astype(bool)
+    df['CBP Transfer Violation'] = df['CBP Transfer Violation'].astype(bool)
+    df['HHS Discharge Violation'] = df['HHS Discharge Violation'].astype(bool)
+    
     return df
 
 df = load_data()
@@ -159,11 +165,8 @@ if show_threshold:
                     alpha=0.2, color='red', label='High Load Period')
 
 if show_anomalies:
-    anomaly_data = df_plot[df_plot['Anomaly Flag'] == True]
-    ax.scatter(anomaly_data['Date'],
-               anomaly_data['Total System Load'],
-               color='red', s=20, zorder=5,
-               label=f'Anomalies ({len(anomaly_data)})')
+    df_plot['Anomaly Flag'] = df_plot['Anomaly Flag'].astype(str).str.strip()
+    anomaly_data = df_plot[df_plot['Anomaly Flag'] == 'True']
 
 ax.set_title(f'Total System Load Over Time ({granularity} View)',
              fontweight='bold', fontsize=14)
